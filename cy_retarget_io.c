@@ -281,9 +281,11 @@ __weak size_t __write(int handle, const unsigned char* buffer, size_t size)
 
 
 #else // (__GNUC__)  GCC
+#if !defined(CY_RETARGET_IO_NO_FLOAT)
 // Add an explicit reference to the floating point printf library to allow the usage of floating
 // point conversion specifier.
 __asm(".global _printf_float");
+#endif
 //--------------------------------------------------------------------------------------------------
 // _write
 //--------------------------------------------------------------------------------------------------
@@ -361,9 +363,11 @@ __weak size_t __read(int handle, unsigned char* buffer, size_t size)
 
 
 #else // (__GNUC__)  GCC
+#if !defined(CY_RETARGET_IO_NO_FLOAT)
 // Add an explicit reference to the floating point scanf library to allow the usage of floating
 // point conversion specifier.
 __asm(".global _scanf_float");
+#endif
 //--------------------------------------------------------------------------------------------------
 // _read
 //--------------------------------------------------------------------------------------------------

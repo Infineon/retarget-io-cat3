@@ -8,6 +8,9 @@ A utility library to retarget the standard input/output (STDIO) messages to a UA
 * Thread safe write for NewLib
 
 ### What Changed?
+#### v1.1.0
+* Add a new macro `CY_RETARGET_IO_NO_FLOAT`. When defined, floating point string formatting support will be disabled,
+  allowing for flash savings in applications which do not need this functionality.
 #### v1.0.0
 * Initial release
 
@@ -31,4 +34,4 @@ Minimum required ModusToolbox™ Software Environment: v2.3.0
 * [ModusToolbox™](https://www.cypress.com/products/modustoolbox-software-environment)
 
 ---
-© Cypress Semiconductor Corporation (an Infineon company) or an affiliate of Cypress Semiconductor Corporation, 2021.
+© Cypress Semiconductor Corporation (an Infineon company) or an affiliate of Cypress Semiconductor Corporation, 2021-2023.

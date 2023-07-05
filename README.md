@@ -10,7 +10,7 @@ A utility library to retarget the standard input/output (STDIO) messages to a UA
 
 **NOTE:** If the application is built using newlib-nano, by default, floating point format strings (%f) are not supported. To enable this support, you must add `-u _printf_float` to the linker command line.
 
-# RTOS Integration
+### RTOS Integration
 To avoid concurrent access to the UART peripheral in a RTOS environment, the ARM and IAR libraries use mutexes to control access to stdio streams. For Newlib (GCC_ARM), the mutex must be implemented in _write() and can be enabled by adding `DEFINES+=CY_RTOS_AWARE` to the Makefile. For all libraries, the program must start the RTOS kernel before calling any stdio functions.
 
 ### Quick Start
@@ -24,6 +24,9 @@ To avoid concurrent access to the UART peripheral in a RTOS environment, the ARM
 ### Enabling Conversion of '\\n' into "\r\n"
 If you want to use only '\\n' instead of "\r\n" for printing a new line using printf(), define the macro `CY_RETARGET_IO_CONVERT_LF_TO_CRLF` using the *DEFINES* variable in the application Makefile. The library will then append '\\r' before '\\n' character on the output direction (STDOUT). No conversion occurs if "\r\n" is already present.
 
+### Floating Point Support
+By default, floating point support is enabled in printf. If floating point values will not be used in printed strings, this functionality can be disabled to reduece flash consumption. To disable floating support, add the following to the application makefile: `DEFINES += CY_RETARGET_IO_NO_FLOAT`.
+
 ### More information
 
 * [API Reference Guide](https://infineon.github.io/retarget-io-cat3/html/index.html)
@@ -32,4 +35,4 @@ If you want to use only '\\n' instead of "\r\n" for printing a new line using pr
 * [ModusToolbox™](https://www.cypress.com/products/modustoolbox-software-environment)
 
 ---
-© Cypress Semiconductor Corporation (an Infineon company) or an affiliate of Cypress Semiconductor Corporation, 2021.
+© Cypress Semiconductor Corporation (an Infineon company) or an affiliate of Cypress Semiconductor Corporation, 2021-2023.
