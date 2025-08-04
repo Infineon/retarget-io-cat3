@@ -7,7 +7,7 @@
 *
 ********************************************************************************
 * \copyright
-* Copyright 2021-2022 Cypress Semiconductor Corporation (an Infineon company) or
+* Copyright 2021-2025 Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation
 *
 * SPDX-License-Identifier: Apache-2.0
@@ -289,7 +289,7 @@ __asm(".global _printf_float");
 //--------------------------------------------------------------------------------------------------
 // _write
 //--------------------------------------------------------------------------------------------------
-__attribute__((weak)) int _write(int fd, const char* ptr, int len)
+int _write(int fd, const char* ptr, int len)
 {
     int nChars = 0;
     (void)fd;
@@ -371,7 +371,7 @@ __asm(".global _scanf_float");
 //--------------------------------------------------------------------------------------------------
 // _read
 //--------------------------------------------------------------------------------------------------
-__attribute__((weak)) int _read(int fd, char* ptr, int len)
+int _read(int fd, char* ptr, int len)
 {
     (void)fd;
 

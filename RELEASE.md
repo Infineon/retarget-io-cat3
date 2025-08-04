@@ -8,6 +8,8 @@ A utility library to retarget the standard input/output (STDIO) messages to a UA
 * Thread safe write for NewLib
 
 ### What Changed?
+#### v1.2.0
+* Updated `_read` and `_write` function attributes to support GCC 14.
 #### v1.1.0
 * Add a new macro `CY_RETARGET_IO_NO_FLOAT`. When defined, floating point string formatting support will be disabled,
   allowing for flash savings in applications which do not need this functionality.
@@ -19,19 +21,19 @@ This version of the Retarget IO was validated for compatibility with the followi
 
 | Software and Tools                        | Version |
 | :---                                      | :----:  |
-| ModusToolbox™ Software Environment        | 2.3.0   |
-| GCC Compiler                              | 10.3.1  |
-| IAR Compiler                              | 9.30.1  |
+| ModusToolbox™ Software Environment        | 3.5.0   |
+| GCC Compiler                              | 14.2.1  |
+| IAR Compiler                              | 9.40.2  |
 | ARM Compiler 6                            | 6.16    |
 
-Minimum required ModusToolbox™ Software Environment: v2.3.0
+Minimum required ModusToolbox™ Software Environment: v3.5.0
 
 ### More information
 
 * [API Reference Guide](https://infineon.github.io/retarget-io-cat3/html/index.html)
-* [Cypress Semiconductor, an Infineon Technologies Company](http://www.cypress.com)
+* [Infineon](http://www.infineon.com)
 * [Infineon GitHub](https://github.com/infineon)
-* [ModusToolbox™](https://www.cypress.com/products/modustoolbox-software-environment)
+* [ModusToolbox Software Environment, Quick Start Guide, Documentation, and Videos](https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/)
 
 ---
-© Cypress Semiconductor Corporation (an Infineon company) or an affiliate of Cypress Semiconductor Corporation, 2021-2023.
+© Cypress Semiconductor Corporation (an Infineon company) or an affiliate of Cypress Semiconductor Corporation, 2021-2025.

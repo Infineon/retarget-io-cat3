@@ -30,9 +30,9 @@ By default, floating point support is enabled in printf. If floating point value
 ### More information
 
 * [API Reference Guide](https://infineon.github.io/retarget-io-cat3/html/index.html)
-* [Cypress Semiconductor, an Infineon Technologies Company](http://www.cypress.com)
+* [Infineon](http://www.infineon.com)
 * [Infineon GitHub](https://github.com/infineon)
-* [ModusToolbox™](https://www.cypress.com/products/modustoolbox-software-environment)
+* [ModusToolbox Software Environment, Quick Start Guide, Documentation, and Videos](https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/)
 
 ---
-© Cypress Semiconductor Corporation (an Infineon company) or an affiliate of Cypress Semiconductor Corporation, 2021-2023.
+© Cypress Semiconductor Corporation (an Infineon company) or an affiliate of Cypress Semiconductor Corporation, 2021-2025.
